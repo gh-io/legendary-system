@@ -1,11 +1,10 @@
-NAME:
-   k3s server - Run management server
-
-USAGE:
-   k3s server [OPTIONS]
-
-OPTIONS:
-   --config FILE, -c FILE                     (config) Load configuration from FILE (default: "/etc/rancher/k3s/config.yaml") [$K3S_CONFIG_FILE]
+---
+NAME: k3s server - Run management server
+USAGE: k3s server [OPTIONS]
+OPTIONS: 
+---
+   
+  --config FILE,-c FILE (config) Load configuration from FILE (default: "/etc/rancher/k3s/config.yaml") [$K3S_CONFIG_FILE]
    --debug                                    (logging) Turn on debug logs [$K3S_DEBUG]
    -v value                                   (logging) Number for the log level verbosity (default: 0)
    --vmodule value                            (logging) Comma-separated list of FILE_PATTERN=LOG_LEVEL settings for file-filtered logging
