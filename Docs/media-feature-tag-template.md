@@ -1,12 +1,13 @@
-Registration template
+## Registration template
  
    To: ietf-media-feature-tags@iana.org (Media feature tags mailing list)
         (or directly to iana@iana.org)
    Subject: Registration of media feature tag XXXX
  
- 
+ ```mdx
     | Instructions are preceded by `|'.  Some fields are optional.
- 
+
+ ```
    Media feature tag name:
  
    ASN.1 identifier associated with feature tag:       [optional]
