@@ -1,20 +1,26 @@
-*** History ***
+## LEGENDARY SYSTEM
+
+
+# History
 
 The History file contains the items that comprise the release notes. The
 items in the list below used to be in Readme.txt. Readme.txt now contans the
 last several releases.
 
 1.0 - First public release
+
     - Withdrawn at the request of RSA DSI over patent claims
     - included Blowfish, BBS, DES, DH, Diamond, DSA, ElGamal, IDEA,
       MD5, RC4, RC5, RSA, SHA, WAKE, secret sharing, DEFLATE compression
     - had a serious bug in the RSA key generation code.
 
 1.1 - Removed RSA, RC4, RC5
+
     - Disabled calls to RSAREF's non-public functions
     - Minor bugs fixed
 
 2.0 - a completely new, faster multiprecision integer class
+
     - added MD5-MAC, HAVAL, 3-WAY, TEA, SAFER, LUC, Rabin, BlumGoldwasser,
       elliptic curve algorithms
     - added the Lucas strong probable primality test
@@ -26,6 +32,7 @@ last several releases.
 
 2.1 - added Tiger, HMAC, GOST, RIPE-MD160, LUCELG, LUCDIF, XOR-MAC,
       OAEP, PSSR, SHARK
+      
     - added precomputation to DH, ElGamal, DSA, and elliptic curve algorithms
     - added back RC5 and a new RSA
     - optimizations in elliptic curves over GF(p)
@@ -34,6 +41,7 @@ last several releases.
     - improved exception generation and handling
 
 2.2 - added SEAL, CAST-128, Square
+
     - fixed bug in HAVAL (padding problem)
     - fixed bug in triple-DES (decryption order was reversed)
     - fixed bug in RC5 (couldn't handle key length not a multiple of 4)
@@ -45,9 +53,11 @@ last several releases.
     - removed several utility classes in favor of the C++ standard library
 
 2.3 - ported to EGCS
+
     - fixed incomplete workaround of min/max conflict in MSVC
 
 3.0 - placed all names into the "CryptoPP" namespace
+
     - added MD2, RC2, RC6, MARS, RW, DH2, MQV, ECDHC, CBC-CTS
     - added abstract base classes PK_SimpleKeyAgreementDomain and
       PK_AuthenticatedKeyAgreementDomain
@@ -66,6 +76,7 @@ last several releases.
     - removed option not to throw exceptions
 
 3.1 - added ARC4, Rijndael, Twofish, Serpent, CBC-MAC, DMAC
+
     - added interface for querying supported key lengths of symmetric ciphers
       and MACs
     - added sample code for RSA signature and verification
@@ -76,6 +87,7 @@ last several releases.
     - fixed bug with attaching objects to Deflator
 
 3.2 - added DES-XEX3, ECDSA, DefaultEncryptorWithMAC
+
     - renamed DES-EDE to DES-EDE2 and TripleDES to DES-EDE3
     - optimized ARC4
     - generalized DSA to allow keys longer than 1024 bits
@@ -84,8 +96,8 @@ last several releases.
     - fixed endian bug in Serpent
     - fixed padding bug in Tiger
 
-4.0 - added Skipjack, CAST-256, Panama, SHA-2 (SHA-256, SHA-384, and SHA-512),
-      and XTR-DH
+4.0 - added Skipjack, CAST-256, Panama, SHA-2 (SHA-256, SHA-384, and SHA-512), and XTR-DH
+
     - added a faster variant of Rabin's Information Dispersal Algorithm (IDA)
     - added class wrappers for these operating system features:
        * high resolution timers on Windows, Unix, and MacOS
@@ -107,6 +119,7 @@ last several releases.
     - optmized multi-precision integer code for better performance
 
 4.1 - added more support for the recommended elliptic curve parameters in SEC 2
+
     - added Panama MAC, MARC4
     - added IV stealing feature to CTS mode
     - added support for PKCS #8 private key format for RSA, DSA, and elliptic
@@ -121,6 +134,7 @@ last several releases.
     - relaxed some restrictions in the license
 
 4.2 - added support for longer HMAC keys
+
     - added MD4 (which is not secure so use for compatibility purposes only)
     - added compatibility fixes/workarounds for STLport 4.5, GCC 3.0.2,
       and MSVC 7.0
@@ -131,6 +145,7 @@ last several releases.
     - fixed a bug in Adler32 where incorrect checksum may be generated
 
 5.0 - added ESIGN, DLIES, WAKE-OFB, PBKDF1 and PBKDF2 from PKCS #5
+  
     - added key validation for encryption and signature public/private keys
     - renamed StreamCipher interface to SymmetricCipher, which is now implemented
       by both stream ciphers and block cipher modes including ECB and CBC
@@ -148,18 +163,22 @@ last several releases.
     - fixed SKIPJACK byte ordering following NIST clarification dated 5/9/02
 
 5.01 - added known answer test for X9.17 RNG in FIPS 140 power-up self test
+     
      - submitted to NIST/CSE, but not publicly released
 
 5.02 - changed EDC test to MAC integrity check using HMAC/SHA1
+   
      - improved performance of integrity check
      - added blinding to defend against RSA timing attack
 
 5.03 - created DLL version of Crypto++ for FIPS 140-2 validation
+   
      - fixed vulnerabilities in GetNextIV for CTR and OFB modes
 
 5.0.4 - Removed DES, SHA-256, SHA-384, SHA-512 from DLL
 
 5.1 - added PSS padding and changed PSSR to track IEEE P1363a draft standard
+   
     - added blinding for RSA and Rabin to defend against timing attacks
       on decryption operations
     - changed signing and decryption APIs to support the above
@@ -172,6 +191,7 @@ last several releases.
     - removed Sapphire
 
 5.2 - merged in changes for 5.01 - 5.0.4
+    
     - added support for using encoding parameters and key derivation parameters
       with public key encryption (implemented by OAEP and DL/ECIES)
     - added Camellia, SHACAL-2, Two-Track-MAC, Whirlpool, RIPEMD-320,
@@ -188,27 +208,27 @@ last several releases.
       handle optional attributes
 
 5.2.1 - fixed bug in the "dlltest" DLL testing program
+     
       - fixed compiling with STLport using VC .NET
       - fixed compiling with -fPIC using GCC
       - fixed compiling with -msse2 on systems without memalign()
       - fixed inability to instantiate PanamaMAC
       - fixed problems with inline documentation
-
-5.2.2 - added SHA-224
+      5.2.2 - added SHA-224
       - put SHA-256, SHA-384, SHA-512, RSASSA-PSS into DLL
-
-5.2.3 - fixed issues with FIPS algorithm test vectors
+      5.2.3 - fixed issues with FIPS algorithm test vectors
       - put RSASSA-ISO into DLL
-
-5.3 - ported to MSVC 2005 with support for x86-64
+      5.3 - ported to MSVC 2005 with support for x86-64
     - added defense against AES timing attacks, and more AES test vectors
     - changed StaticAlgorithmName() of Rijndael to "AES", CTR to "CTR"
 
 5.4 - added Salsa20
+
     - updated Whirlpool to version 3.0
     - ported to GCC 4.1, Sun C++ 5.8, and Borland C++Builder 2006
 
 5.5 - added VMAC and Sosemanuk (with x86-64 and SSE2 assembly)
+  
     - improved speed of integer arithmetic, AES, SHA-512, Tiger, Salsa20,
       Whirlpool, and PANAMA cipher using assembly (x86-64, MMX, SSE2)
     - optimized Camellia and added defense against timing attacks
@@ -227,8 +247,10 @@ last several releases.
 
 5.5.1 - fixed VMAC validation failure on 32-bit big-endian machines
 
-5.5.2 - ported x64 assembly language code for AES, Salsa20, Sosemanuk, and Panama
+5.5.2 - ported x64 assembly 
+language code for AES, Salsa20, Sosemanuk, and Panama
         to MSVC 2005 (using MASM since MSVC doesn't support inline assembly on x64)
+        
       - fixed Salsa20 initialization crash on non-SSE2 machines
       - fixed Whirlpool crash on Pentium 2 machines
       - fixed possible branch prediction analysis (BPA) vulnerability in
@@ -240,6 +262,7 @@ last several releases.
         and Borland C++Builder 2007
 
 5.6.0 - added AuthenticatedSymmetricCipher interface class and Filter wrappers
+     
       - added CCM, GCM (with SSE2 assembly), EAX, CMAC, XSalsa20, and SEED
       - added support for variable length IVs
       - added OIDs for Brainpool elliptic curve parameters
@@ -255,6 +278,7 @@ last several releases.
       - ported to GCC 4.3, C++Builder 2009, Sun CC 5.10, Intel C++ Compiler 11
 
 5.6.1 - added support for AES-NI and CLMUL instruction sets in AES and GMAC/GCM
+    
       - removed WAKE-CFB
       - fixed several bugs in the SHA-256 x86/x64 assembly code:
          * incorrect hash on non-SSE2 x86 machines on non-aligned input
@@ -265,7 +289,9 @@ last several releases.
       - ported to MSVC 2010, GCC 4.5.1, Sun Studio 12u1, C++Builder 2010, Intel C++ Compiler 11.1
       - renamed the MSVC DLL project to "cryptopp" for compatibility with MSVC 2010
 
+
 5.6.2 - changed license to Boost Software License 1.0
+
       - added SHA-3 (Keccak)
       - updated DSA to FIPS 186-3 (see DSA2 class)
       - fixed Blowfish minimum keylength to be 4 bytes (32 bits)
@@ -274,6 +300,7 @@ last several releases.
       - ported to MSVC 2012, GCC 4.7, Clang 3.2, Solaris Studio 12.3, Intel C++ Compiler 13.0
 
 5.6.3 - maintenance release, honored API/ABI/Versioning requirements
+
       - expanded processes to include community and its input
          * 12 unique contributors for this release
       - fixed CVE-2015-2141
@@ -315,7 +342,8 @@ last several releases.
       - added additional Doxygen-based documentation
       - ported to MSVC 2015, Xcode 7.2, GCC 5.2, Clang 3.7, Intel C++ 16.00
 
-5.6.4 - September 11, 2016
+5.6.4 - September 11, 
+
       - maintenance release, honored API/ABI/Versioning requirements
       - expanded community input and support
          * 22 unique contributors for this release
@@ -359,6 +387,7 @@ last several releases.
         MacPorts GCC 7.0, Clang 3.8, Intel C++ 17.00
 
 5.6.5 - October 11, 2016
+
       - maintenance release, recompile of programs recommended
       - expanded community input and support
          * 25 unique contributors as of this release
@@ -377,6 +406,7 @@ last several releases.
         MacPorts GCC 7.0, Clang 3.8, Intel C++ 17.00
 
 6.0.0 - January 22, 2018
+
       - Major release, recompile of programs required
       - expanded community input and support
          * 43 unique contributors as of this release
@@ -396,6 +426,7 @@ last several releases.
         MacPorts GCC 7.0, Clang 4.0, Intel C++ 17.00, IBM XL C/C++ 13.1
 
 6.1.0 - February 22, 2018
+
       - minor release, maintenance items
       - expanded community input and support
          * 46 unique contributors as of this release
@@ -414,6 +445,7 @@ last several releases.
         MacPorts GCC 7.0, Clang 4.0, Intel C++ 17.00, IBM XL C/C++ 13.1
 
 7.0.0 - April 8, 2018
+
       - major release, recompile of programs required
       - expanded community input and support
          * 48 unique contributors as of this release
@@ -435,6 +467,7 @@ last several releases.
         MacPorts GCC 7.0, Clang 4.0, Intel C++ 17.00, IBM XL C/C++ 13.1
 
 8.0.0 - December 28, 2018
+
       - major release, recompile of programs required
       - expanded community input and support
          * 54 unique contributors as of this release
@@ -453,6 +486,7 @@ last several releases.
       - remove CRYPTOPP_ALLOW_UNALIGNED_DATA_ACCESS support
 
 8.1.0 - February 22, 2019
+
       - minor release, no recompile of programs required
       - expanded community input and support
         * 56 unique contributors as of this release
@@ -469,6 +503,7 @@ last several releases.
       - add IETF ChaCha, XChaCha, ChaChaPoly1305 and XChaChaPoly1305
 
 8.2.0 - April 28, 2019
+
       - minor release, no recompile of programs required
       - expanded community input and support
         * 56 unique contributors as of this release
@@ -482,6 +517,7 @@ last several releases.
       - fix missing BlockSize() in BLAKE2 classes
 
 8.3.0 - December 20, 2020
+
       - minor release, recompile of programs required
       - expanded community input and support
         * 66 unique contributors as of this release
@@ -527,6 +563,7 @@ last several releases.
       - clear asserts in TestDataNameValuePairs
 
 8.4.0 - January 2, 2021
+
       - minor release, recompile of programs required
       - expanded community input and support
         * 67 unique contributors as of this release
@@ -544,6 +581,7 @@ last several releases.
       - port to Apple M1 hardware
 
 8.6.0 - September 21, 2021
+
       - minor release, recompile of programs required
       - expanded community input and support
         * 74 unique contributors as of this release
@@ -569,6 +607,7 @@ last several releases.
       - update documentation
 
 8.7.0 - August 7, 2022
+
       - minor release, recompile of programs required
       - expanded community input and support
         * 81 unique contributors as of this release
@@ -582,6 +621,7 @@ last several releases.
       - work around several GCC 11 & 12 problems
 
 8.8.0 - June 25, 2023
+
       - minor release, recompile of programs required
       - expanded community input and support
         * 88 unique contributors as of this release
@@ -597,6 +637,7 @@ last several releases.
       - update documentation
 
 8.9.0 - October 1, 2023
+
       - minor release, recompile of programs required
       - expanded community input and support
         * 88 unique contributors as of this release
