@@ -1,0 +1,7 @@
+#!/bin/bash
+set -o history
+set -o histexpand
+# Makes a complete copy of a Badger database directory.
+# Repeat rsync if the MANIFEST and SSTables are updated.
+rsync -avz --delete db/ dst
+while !! | grep -q "(MANIFEST\|\.sst)$"; do :; done
