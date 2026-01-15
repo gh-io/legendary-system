@@ -1,5 +1,4 @@
 // serpent.h - originally written and placed in the public domain by Wei Dai
-
 /// \file serpent.h
 /// \brief Classes for the Serpent block cipher
 /// \sa <a href="https://www.cl.cam.ac.uk/~rja14/serpent.html">A
@@ -70,3 +69,4 @@ typedef Serpent::Decryption SerpentDecryption;
 NAMESPACE_END
 
 #endif  // CRYPTOPP_SERPENT_H
+
