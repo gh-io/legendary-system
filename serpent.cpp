@@ -8,7 +8,7 @@
 
 #include "serpentp.h"
 
-NAMESPACE_BEGIN(CryptoPP)
+NAMESPACE_BEGIN()
 
 void Serpent_KeySchedule(word32 *k, unsigned int rounds, const byte *userKey, size_t keylen)
 {
@@ -123,3 +123,4 @@ start:
 }
 
 NAMESPACE_END
+
