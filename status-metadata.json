@@ -1,0 +1,10 @@
+{
+  "type": "google.rpc.StatusDetails",
+  "localizedMessage": {
+    "locale": "en-US",
+    "message": "The specified format type is supported"
+  },
+  "requestInfo": {
+    "request_id": "9a832312f564493f932d3207a993e9b0"
+  }
+}
