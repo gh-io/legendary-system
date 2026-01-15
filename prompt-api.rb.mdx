@@ -1,7 +1,9 @@
-![Thomas Steiner](https://web.dev/images/authors/thomassteiner.jpg)  
+
+>
+>![Thomas Steiner](https://web.dev/images/authors/thomassteiner.jpg)  
 Thomas Steiner  
-[GitHub](https://github.com/tomayac)[LinkedIn](https://www.linkedin.com/in/thomassteinerlinkedin)[Mastodon](https://toot.cafe/@tomayac)[Bluesky](https://bsky.app/profile/tomayac.com)[Homepage](https://blog.tomayac.com/)  
-![Alexandra Klepper](https://web.dev/images/authors/alexandraklepper.jpg)  
+>[GitHub](https://github.com/tomayac)[LinkedIn](https://www.linkedin.com/in/thomassteinerlinkedin)[Mastodon](https://toot.cafe/@tomayac)[Bluesky](https://bsky.app/profile/tomayac.com)[Homepage](https://blog.tomayac.com/)  
+>![Alexandra Klepper](https://web.dev/images/authors/alexandraklepper.jpg)  
 Alexandra Klepper  
 [GitHub](https://github.com/alexandrascript)[Bluesky](https://bsky.app/profile/alexandrascript.com)
 
@@ -211,6 +213,7 @@ The Prompt API supports the following input types:
 
 This snippet shows a multimodal session that first processes two visuals (one image`Blob`and one`HTMLCanvasElement`) and has the AI compare them, and that second lets the user respond with an audio recording (as an`AudioBuffer`).  
 
+```rb
     const session = await LanguageModel.create({
       expectedInputs: [
         { type: "text", languages: ["en"] },
@@ -251,7 +254,7 @@ This snippet shows a multimodal session that first processes two visuals (one im
       },
     ]);
     console.log(response2);
-
+```
 ### Append messages
 
 Inference may take some time, especially when prompting with multimodal inputs. It can be useful to send predetermined prompts in advance to populate the session, so the model can get a head start on processing.
@@ -259,7 +262,7 @@ Inference may take some time, especially when prompting with multimodal inputs. 
 While`initialPrompts`are useful at session creation, the`append()`method can be used in addition to the`prompt()`or`promptStreaming()`methods, to give additional additional contextual prompts after the session is created.
 
 For example:  
-
+```rb
     const session = await LanguageModel.create({
       initialPrompts: [
         {
@@ -289,7 +292,7 @@ For example:
     analyzeButton.onclick = async (e) => {
       analysisResult.textContent = await session.prompt(userQuestionInput.value);
     };
-
+```
 The promise returned by`append()`fulfills once the prompt has been validated, processed, and appended to the session. The promise is rejected if the prompt cannot be appended.
 
 ### Pass a JSON Schema
@@ -297,7 +300,7 @@ The promise returned by`append()`fulfills once the prompt has been validated, pr
 Add the`responseConstraint`field to`prompt()`or`promptStreaming()`method to pass a JSON Schema as the value. You can then use[structured output](https://developer.chrome.com/docs/ai/structured-output-for-prompt-api)with the Prompt API.
 
 In the following example, the JSON Schema makes sure the model responds with`true`or`false`to classify if a given message is about pottery.  
-
+```py
     const session = await LanguageModel.create();
 
     const schema = {
@@ -316,11 +319,11 @@ In the following example, the JSON Schema makes sure the model responds with`tru
     );
     console.log(JSON.parse(result));
     // true
-
+```
 Your implementation can include a JSON Schema or regular expression as part of the message sent to the model. This uses some of the[input quota](https://developer.chrome.com/docs/ai/prompt-api#session_management). You can measure how much of the input quota it will use by passing the`responseConstraint`option to`session.measureInputUsage()`.
 
 You can avoid this behavior with the`omitResponseConstraintInput`option. If you do so, we recommend that you include some guidance in the prompt:  
-
+```js
     const result = await session.prompt(`
       Summarize this feedback into a rating between 0-5. Only output a JSON
       object { rating }, with a single property whose value is a number:
@@ -349,11 +352,11 @@ If you expect a short result, you can use the`prompt()`function that returns the
       const result = await session.prompt('Write me a poem!');
       console.log(result);
     }
-
+```
 ### Streamed output
 
 If you expect a longer response, you should use the`promptStreaming()`function which lets you show partial results as they come in from the model. The`promptStreaming()`function returns a`ReadableStream`.  
-
+```js
     const { defaultTemperature, maxTemperature, defaultTopK, maxTopK } =
       await LanguageModel.params();
 
@@ -378,7 +381,7 @@ Both`prompt()`and`promptStreaming()`accept an optional second parameter with a`s
     const result = await session.prompt('Write me a poem!', {
       signal: controller.signal,
     });
-
+```
 ## Session management
 
 Each session keeps track of the context of the conversation. Previous interactions are taken into account for future interactions until the session's context window is full.
