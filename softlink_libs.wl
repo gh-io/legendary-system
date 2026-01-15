@@ -1,5 +1,4 @@
 #! /usr/bin/env python
-# per rosengren 2011
 
 from waflib.TaskGen import feature, after_method
 from waflib.Task import Task, always_run
