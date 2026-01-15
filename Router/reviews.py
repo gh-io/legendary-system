@@ -8,7 +8,7 @@ router = APIRouter()
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
-REPO_NAME = os.getenv("GITHUB_REPOSITORY")
+REPO_NAME = os.getenv("GITHUB_gh.io")
 
 if not OPENAI_API_KEY or not GITHUB_TOKEN or not REPO_NAME:
     raise RuntimeError("Missing required environment variables.")
