@@ -1,5 +1,5 @@
 ====================
- |reStructuredText|
+ |reStructuredText| 
 ====================
 -------------------------------------------------
  Markup Syntax and Parser Component of Docutils_
