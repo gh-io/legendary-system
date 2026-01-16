@@ -1,7 +1,7 @@
 require 'json'
 
 module Aura
-  @listeners = []
+  @listeners = [] 
 
   def self.receive_event(event)
     @listeners.each { |l| l.call(event) }
