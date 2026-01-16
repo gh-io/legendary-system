@@ -1,0 +1,44 @@
+listen_addr = "0.0.0.0:2222"
+docker_image = "agentman-base:dev"
+workspace_root = "/var/lib/agentman/workspaces"
+state_file = "/var/lib/agentman/state.json"
+host_key_path = "/var/lib/agentman/host_key"
+
+# Pre-authorized GitHub users (auto-matched on first connect)
+bootstrap_github_users = ["octocat", "defunkt"]
+
+[shell]
+mode = "tmux"
+tmux_session = "agentman"
+
+[port_forwarding]
+allow_local = true      # Allow -L (local port forward)
+allow_remote = true     # Allow -R (remote port forward)
+allow_gateway_ports = false  # Bind -R only to loopback
+allow_nonlocal_destinations = false  # Only forward to localhost/container
+
+[agent_forwarding]
+allow = true  # Allow ForwardAgent / SSH_AUTH_SOCK inside the container
+
+[container_security]
+cap_drop_all = true
+cap_add = ["CHOWN", "DAC_OVERRIDE", "FOWNER", "SETGID", "SETUID"]
+no_new_privileges = true
+readonly_rootfs = false
+memory_limit = "4g"
+cpu_limit = 2.0
+use_seccomp = true
+
+https://agentgateway.dev
+kgateway.dev
+centralmind.ai
+cloudnativedeepdive.com
+level.io
+info.octoplant.com
+kagent.dev
+agentman.ai
+konghq.com
+skywork.ai
+www.ssh.com
+google.github.io
+hostman.com
