@@ -3,7 +3,7 @@
    small. Use the substitute from _math.h on all platforms: it includes
    workarounds for buggy handling of zeros.
  */
-
+ 
 static double
 _Py_log1p(double x)
 {
