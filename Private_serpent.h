@@ -3,7 +3,7 @@
 #ifndef CRYPTOPP_SERPENTP_H
 #define CRYPTOPP_SERPENTP_H
 
-NAMESPACE_BEGIN(CryptoPP)
+NAMESPACE_BEGIN()
 
 // linear transformation
 #define LT(i,a,b,c,d,e)	{\
@@ -437,3 +437,4 @@ void Serpent_KeySchedule(word32 *k, unsigned int rounds, const byte *userKey, si
 NAMESPACE_END
 
 #endif  // CRYPTOPP_SERPENTP_H
+
