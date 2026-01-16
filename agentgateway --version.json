@@ -1,0 +1,7 @@
+{
+  "version": "0.11.1",
+  "git_revision": "90f7b25855fb5f5fbefcc16855206040cba9b77d",
+  "rust_version": "1.89.0",
+  "build_profile": "release",
+  "build_target": "x86_64-unknown-linux-musl"
+}
