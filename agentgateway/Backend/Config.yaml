@@ -1,0 +1,10 @@
+binds:
+- port: 3000
+  listeners:
+  - protocol: HTTP
+    routes:
+    - backends:
+      - host: example.com:8080
+        weight: 1
+      - host: 127.0.0.1:80
+        weight: 9
