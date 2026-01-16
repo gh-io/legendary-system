@@ -1,9 +1,10 @@
 # Working with the RubyGems registry
 
 You can configure RubyGems to publish a package to GitHub Packages and to use packages stored on GitHub Packages as dependencies in a Ruby project with Bundler.
-
+ 
 <!-- 2148AF7B-5FF8-4B28-A808-D692FEE2225A -->
 
+  
 ## Prerequisites
 
 * You must have RubyGems 2.4.1 or higher. To find your RubyGems version:
