@@ -1,0 +1,8 @@
+docker pull envoyproxy/envoy:tools-v1.37-latest
+docker pull envoyproxy/envoy:google-vrp-v1.37-latest
+docker pull envoyproxy/envoy:distroless-v1.37-latest
+docker pull envoyproxy/envoy:debug-v1.37-latest
+docker pull envoyproxy/envoy:contrib-distroless-v1.37-latest
+docker pull envoyproxy/envoy:contrib-debug-v1.37-latest
+docker pull envoyproxy/envoy:contrib-v1.37-latest
+docker pull envoyproxy/envoy:v1.37-latest
