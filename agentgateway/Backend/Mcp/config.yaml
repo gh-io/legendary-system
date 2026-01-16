@@ -1,0 +1,10 @@
+backends:
+- mcp:
+    targets:
+    - name: stdio-server
+      stdio:
+        cmd: npx
+        args: ["@modelcontextprotocol/server-everything"]
+    - name: http-server
+      mcp:
+        host: https://agentgateway.dev/mcp
