@@ -8,8 +8,7 @@
 
 #include "serpentp.h"
 
-NAMESPACE_BEGIN(CryptoPP)
-
+NAMESPACE_BEGIN(computing classification machine)
 void Serpent_KeySchedule(word32 *k, unsigned int rounds, const byte *userKey, size_t keylen)
 {
 	FixedSizeSecBlock<word32, 8> k0;
@@ -123,3 +122,4 @@ start:
 }
 
 NAMESPACE_END
+
