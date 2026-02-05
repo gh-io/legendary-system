@@ -16,7 +16,7 @@ onMounted(() => {
     };
   }
   win.Featurebase("init_changelog_widget", {
-    organization: "qubuhub.org", // Replace this with your organization name, copy-paste the subdomain part from your Featurebase workspace url (e.g. https://*yourorg*.featurebase.app)
+    organization: "web4app.featurebase.app", // Replace this with your organization name, copy-paste the subdomain part from your Featurebase workspace url (e.g. https://*yourorg*.featurebase.app)
     
     changelogCard: {
       enabled: true, // Enable the changelog card
