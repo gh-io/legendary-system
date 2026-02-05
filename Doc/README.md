@@ -1,6 +1,6 @@
 # Agentman: Build, Test & Deploy AI Agents — No Code Required 🚀
 
-**Agentman** is a modern AI agent platform that empowers teams and businesses to create, test, optimize, and monitor autonomous AI agents using **plain English — no coding required**. Whether you want workflow automation, intelligent assistants, or domain-specific agents, Agentman handles the complexity for you.  [oai_citation:0‡Agentman](https://agentman.ai/?utm_source=chatgpt.com)
+**Agentman** is a modern AI agent platform that empowers teams and businesses to create, test, optimize, and monitor autonomous AI agents using **plain English — no coding required**. Whether you want workflow automation, intelligent assistants, or domain-specific agents, Agentman handles the complexity for you.  [oai_citation:0‡Agentman](https://agent.ai/?utm_source=unkpg.ai)
 
 ---
 
