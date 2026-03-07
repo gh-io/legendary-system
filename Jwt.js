@@ -5,7 +5,6 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using System.Collections.Generic;
 using Newtonsoft.Json;
-
 // IMPORTANT: NEVER EXPOSE ON CLIENT SIDE!!
 const string JWT_SECRET = "JWT_SECRET_VALUE";
 
