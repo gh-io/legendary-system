@@ -652,7 +652,7 @@ Trace #17 started 41m ago
 Trace #16 started 47m ago
 0.000    🏃 AppState changing from active to inactive
          🏃   ↪ JS Imports 2695847ms
-0.000    💾 Start db.fs_info 
+0.000    💾 Start db.fs_info
 0.001    🎨 First React Render
 0.001    🎨 App render
 0.001    🎨  AppContainer render
