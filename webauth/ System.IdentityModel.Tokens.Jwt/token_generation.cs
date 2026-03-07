@@ -32,8 +32,8 @@ public string generateJWTToken(User user)
             new
             {
                 id = "987654321",           // required
-                name = "Business Inc. 23",  // required
-                monthlySpend = 500,         // optional
+                name = "qubuhub Inc. 23",  // required
+                monthlySpend = 5000,         // optional
                 createdAt = "2023-05-19T15:35:49.915Z", // optional
                 // Add any optional custom attributes - must be configured from settings to work
                 industry = "Fintech",
