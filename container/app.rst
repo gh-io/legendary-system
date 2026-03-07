@@ -1,4 +1,4 @@
-Trace #28 started 3m ago
+Trace #28 started 3m ago 
 0.000     🏃 AppState changing from active to inactive
           🏃   ↪ JS Imports 5311529ms
 0.000     💾 Start db.fs_info 
