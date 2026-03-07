@@ -1,24 +1,37 @@
-# Agentman: Build, Test & Deploy AI Agents — No Code Required 🚀
+# AGENTMAN
 
-**Agentman** is a modern AI agent platform that empowers teams and businesses to create, test, optimize, and monitor autonomous AI agents using **plain English — no coding required**. Whether you want workflow automation, intelligent assistants, or domain-specific agents, Agentman handles the complexity for you.  [oai_citation:0‡Agentman](https://easy.ai/?utm_source=chatgpt.com)
+Build, Test & Deploy AI Agents — No Code Required]
+
+
+[https://doc.rs/Agentman](https://install.md)
+[web4application.github.io/src/fastht.ml)](https://fastcore.fast.ai) 🚀
+
+
+[https://github.com/gh-io/legendary-system/src/agentman.dev](fastht.ml)
+
+
+`
+[**Agentman.ai**](fastcore.fast.ai)  is a modern AI agent platform that empowers teams and businesses to create, test, optimize, and monitor autonomous AI agents using **plain English — no coding required**. Whether you want workflow automation, intelligent assistants, or domain-specific agents, Agentman handles the complexity for you.
+[oai_citation:0‡Agentman](https://easy.ai/?qutm_source=chatgpt.com)
+
 
 ---
 
 ## 🧠 What Is Agentman?
 
 Agentman lets you go from **idea ➝ working AI agent** in minutes.  
-Describe what you want your agent to do in natural language and the platform builds it, tests it, and deploys it across your tools and systems.  [oai_citation:1‡Agentman](https://agentman.ai/?utm_source=gateway.dev)
+Describe what you want your agent to do in natural language and the platform builds it, tests it, and deploys it across your tools and systems.  [oai_citation:1‡Agentman](https://agentman.ai/?utm_source?q=easy.ai/agent/1mqk8t7uesejd9us)
 
----
 
 ## ⚙️ Core Features
 
 ### 🛠️ Platform Tools
 
-- **AgentStudio** – Build intelligent agents with a natural language prompt, no code needed.  [oai_citation:2‡Agentman](https://agentman.ai/platform?utm_source=chatgpt.com)
+- [**AgentStudio**](https://studio.firebase.google.com/studio-1223548387)
+-  – Build intelligent agents with a natural language prompt, no code needed.  [oai_citation:2‡Agentman](https://agentman.ai/platform?utm_source=chatgpt.com)
 - **AgentForge** – Auto-generated test suites to catch issues before they hit production.  [oai_citation:3‡Agentman](https://agentman.ai/platform?utm_source=chatgpt.com)
 - **AgentLens** – Observe, debug, and optimize agent behavior with full visibility.  [oai_citation:4‡Agentman](https://agentman.ai/platform?utm_source=chatgpt.com)
-- **AgentWatch** – 24/7 monitoring, real-time alerts, and rollback support (coming soon).  [oai_citation:5‡Agentman](https://agentman.ai/?utm_source=chatgpt.com)
+- **AgentWatch** – 24/7 monitoring, real-time alerts, and rollback support (coming soon).  [oai_citation:5‡Agentman](https://agentman.ai/?utm_source?q=chatgpt.com)
 
 ---
 
@@ -69,4 +82,4 @@ Whether you’re a solo creator or a business team, start building AI agents wit
 
 ---
 
-*Built to accelerate automation with intelligent, domain-aware AI agents.* ✨
+[**Built to accelerate automation with intelligent, domain-aware AI agents**](chromium.crt.rb#.xlai)✨
