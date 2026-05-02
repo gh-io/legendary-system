@@ -32,3 +32,16 @@ for agent systems.
 - [Integrations](integrations/overview.md)
 - [Observability](observability/overview.md)
 - [Security](security/overview.md)
+
+
+
+[`docs/index.md`]:
+
+
+•	.githu/ — CI workflows
+•	Cloud/, DB/, Lib/, Model/, Models/, Modules/, Router/, Template/, Tools/, Workspace/ — structure that fits modular code
+•	agentgateway.dev/examples/basic — example usage directory
+•	agent.proto, agentgateway --version.json, config.yaml, etc — config and protocol definitions
+•	Some documentation files like index.md, prompt-api.md inside the repo
+•	Mixed languages (C#, Python, MDX, R, C, others) — suggests multi-part tooling or example integrations  ￼
+
