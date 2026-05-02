@@ -150,7 +150,7 @@ One way to do this is to handle tool calls as events, as shown below:
 }
 ```
 
-```js
+```jsx
 // 2. script.js: Handle tool calls as events.
 
 window.agent.addEventListener('toolcall', async e => {
@@ -349,12 +349,151 @@ The proposed API will not conflict with these existing automation techniques. If
 
 >## Future explorations
 
-WebModelContext/explainer.md
+>WebModelContext/explainer.md
 ### Progressive web apps (PWA)
 
-PWAs should also be able to use the Web Model Context API as described in this proposal. There are potential advantages to installing a site as a PWA. In the current proposal, tools are only discoverable once a page has been navigated to and only persist for the lifetime of the page. A PWA with an app manifest could declare tools that are available "offline", that is, even when the PWA is not currently running. The host system would then be able to launch the PWA and navigate to the appropriate page when a tool call is requested.
+PWAs should also be able to use the `Web Model Context API `as described in this proposal. There are potential advantages to installing a site as a PWA. In the current proposal, tools are only discoverable once a page has been navigated to and only persist for the lifetime of the page. A PWA with an app manifest could declare tools that are available "offline", that is, even when the PWA is not currently running. The host system would then be able to launch the PWA and navigate to the appropriate page when a tool call is requested.
 
-### Background model context providers
+>### Background model context providers
 
 Some tools that a web app may want to provide for agents and assistive technologies may not require any web UI. For example, a web developer building a "To Do" application may want to expose a tool that adds an item to the user's todo list without showing a browser window. The web developer may be content to just show a notification that the todo item was added. 
 For scenarios like this, it may be helpful to combine tool call handling with something like the ['launch'](https://github.com/WICG/web-app-launch/blob/main/sw_launch_event.md) event. A client application might attach a tool call to a "launch" request which is handled entirely in a service worker without spawning a browser window.
+Intended use cases
+>`webmodelcontextprotocol/llms`
+>`blink`
+0 param, current doc (`manifest.in` has `id`)
+Executes:
+
+
+      await navigator.install();
+    
+Install (0 params)
+1 param, background doc, cross origin (manifest has `id`)
+
+Executes:
+
+
+      let install_url = "https://mustjab.github.io/";
+      await navigator.install(install_url);
+    
+Install (1 params)
+2 param, background doc, cross origin (manifest has no `id`)
+
+Executes:
+
+
+      let install_url = "https://diek.us/bubble/";
+      let manifest_id = "https://diek.us/bubble/";
+      await navigator.install(install_url, manifest_id);
+    
+Install (2 params)
+2 param, background doc, cross origin, with screenshots
+
+*Note - screenshots not yet supported
+
+Executes:
+
+
+      let install_url = "https://squoosh.app/";
+      let manifest_id = "https://squoosh.app/?utm_medium=PWA&utm_source=launcher";
+      await navigator.install(install_url, manifest_id);
+    
+Install (2 params)
+Edge case - installing self with params
+
+*Note - Although the end result is the same ('foo' site installs itself), passing parameters like this will launch the foo app in a new window, preserving the 'foo' tab in the main browser window. 
+
+Install self, 1 parameter
+
+Executes:
+
+
+      let install_url = "https://kbhlee2121.github.io/pwa/web-install/index.html";
+      await navigator.install(install_url);
+    
+Install (1 params)
+Install self, 2 parameters
+
+Executes:
+
+
+      let install_url = "https://kbhlee2121.github.io/pwa/web-install/index.html";
+      let manifest_id = "https://kbhlee2121.github.io/WebInstallSample";
+      await navigator.install(install_url, manifest_id);
+    
+Install (2 params)
+DataError cases - manifest id validation
+
+1 param, background doc, NO id in manifest
+
+Executes:
+
+
+      let install_url = "https://amandabaker.github.io/pwa/web-install/index.html";
+      await navigator.install(install_url);
+    
+Install (1 params)
+2 params, background doc, YES id in manifest, mismatched input
+
+Executes:
+
+
+      let install_url = "https://mustjab.github.io/";
+      let manifest_id = "mismatched-manifest-id";
+      await navigator.install(install_url, manifest_id);
+    
+Install (2 params)
+2 params, background doc, NO id in manifest, mismatched input
+
+Executes:
+
+
+      let install_url = "https://amandabaker.github.io/pwa/web-install/index.html";
+      let manifest_id = "mismatched-manifest-id";
+      await navigator.install(install_url, manifest_id);
+    
+Install (2 params)
+V8 TypeError - bad JS input
+
+1 param, undefined
+
+Executes:
+
+
+      let install_url;
+      await navigator.install(install_url);
+    
+Install (1 params)
+1 param, invalid URL
+
+Executes:
+
+
+      let install_url = "badurl";
+      await navigator.install(install_url);
+    
+Install (1 params)
+2 param, undefined install url
+
+Executes:
+
+
+      let install_url;
+      let manifest_id = "https://diek.us/bubble/";
+      await navigator.install(install_url, manifest_id);
+    
+Install (2 params)
+2 param, undefined manifest id
+
+Executes:
+
+
+      let install_url = "https://kbhlee2121.github.io/pwa/web-install/index.html";
+      let manifest_id;
+      await navigator.install(install_url, manifest_id);
+    
+Install (2 params)
+
+      let install_url = "https://www.hulu.com/app/?utm_source=a2hs";
+      let manifest_id = "https://www.hulu.com/app/?utm_source=a2hs";
+      await navigator.install(install_url, manifest_id);
