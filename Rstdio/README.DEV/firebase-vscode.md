@@ -2,7 +2,7 @@
 
 This extension is in the development and exploration stage.
 
-## Running
+## Running 
 
 1. In order to make sure f5 launches the extension properly, first open your
    VS Code session from the `firebase-vscode` subdirectory (not the `firebase-tools` directory).
