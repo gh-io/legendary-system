@@ -6,7 +6,7 @@
 nix-shell \
   --arg loadJSBuiltinsDynamically false \
   --arg devTools '[]' --arg benchmarkTools '[]' \
-  --run 'make build-ci -j12'
+  --run 'make build-ci -j12' 
 
 mv out/Release/node ./node_old
 
