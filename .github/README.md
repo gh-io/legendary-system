@@ -1,7 +1,7 @@
 # legendary-system
 
 
-## The GitHub file list (partial) — suggestive of an ```agent/runtime``` project:
+## The GitHub file list (partial) — suggestive of an `agent/runtime` project:
 	•	.github/ — CI workflows
 	•	Cloud/, DB/, Lib/, Model/, Models/, Modules/, Router/, Template/, Tools/, Workspace/ — structure that fits modular code
 	•	agentgateway.dev/examples/basic — example usage directory
@@ -41,7 +41,7 @@ This repository contains:
 ---
 
 ## 🗂️ Repo Structure Overview
-```bash
+```cfscript
 .github/                 # CI/CD workflows
 Cloud/                  # Cloud deploy helpers
 DB/                     # Database schemas & migrations
