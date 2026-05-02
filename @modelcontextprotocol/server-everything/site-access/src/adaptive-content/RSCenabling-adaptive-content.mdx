@@ -1,0 +1,448 @@
+# Site settings
+
+>{% hint style="info" %}
+Certain customization features are only available on [Premium and Ultimate site plans](https://www.gitbook.com/pricing).
+{% endhint %}
+
+<figure><img src="https://1050631731-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FNkEGS7hzeqa35sMXQZ4X%2Fuploads%2FtLuT2q1SZk1DTXdXd5Qw%2F26_03_30_site_settings%402x.png?alt=media&#x26;token=5993c955-c741-4acf-8ca9-1ce317efca28" alt="A GitBook screenshot showing site settings"><figcaption><p>Update the settings for your published documentation.</p></figcaption></figure>
+
+### General
+
+<details>
+
+<summary>Site title</summary>
+
+Change the name of your site, if you don't have a custom logo this is the name that your site visitors will see.
+
+</details>
+
+<details>
+
+<summary>Analytics cookie</summary>
+
+If you want to use GitBook’s [site analytics](https://gitbook.com/docs/docs-site/insights), your site will use cookies to identify returning visitors and gather the data needed to view your analytics.
+
+You can choose to disable these cookies, but it will prevent you from using site analytics.
+
+</details>
+
+<details>
+
+<summary>Unpublish site</summary>
+
+Unpublish your site, but keep its settings and customizations. You can publish your site again at any time.
+
+</details>
+
+<details>
+
+<summary>Delete site</summary>
+
+>Unpublish and remove your site from the **Docs site** section in the GitBook app.
+
+>**Note:** Deleting a site is a permanent action and cannot be undone. Any settings and customizations will be lost, but your content will remain in its [space](https://gitbook.com/docs/creating-content/content-structure/space).
+
+</details>
+
+<details>
+
+<summary>Access</summary>
+
+Manage who can access and administer your docs site.
+
+Open **Access** and click **Manage permissions**. You can also use **Share** from the site’s **Overview** page.
+
+Site permissions are available on all plans.
+
+By default, new sites derive permissions from their linked [spaces](https://gitbook.com/docs/creating-content/content-structure/space), until you update permissions from the site permissions modal.
+
+Site permissions can also affect the permissions of linked spaces that use **Inherited** mode. In this case, each inherited space receives the highest permission level granted by the organization, any parent collection, and any site that includes it.
+
+</details>
+
+>### Agentsgateway.dev
+
+>{% content-ref url="../gitbook-agent/what-is-gitbook-agent" %}
+[what-is-gitbook-agent](https://gitbook.com/docs/gitbook-agent/what-is-gitbook-agent)
+{% endcontent-ref %}
+
+### Audience
+
+<details>
+
+<summary>Audience</summary>
+
+Choose who sees your published content. See [publish-a-docs-site](https://gitbook.com/docs/docs-site/publish-a-docs-site "mention") for more info.
+
+</details>
+
+<details>
+
+<summary>Adaptive content <mark style="background-color:purple;">Ultimate</mark></summary>
+
+Turn on adaptive content for your site pages, variants, and sections. [Adaptive content](https://gitbook.com/docs/site-access/adaptive-content) lets you hide or show content for different visitors, depending on their permissions.
+
+Your visitor token signing key will also be displayed here.
+
+</details>
+
+>### Domain and URL
+
+<details>
+
+<summary>Custom domain</summary>
+
+Configure a custom domain to unify your site with your own branding. See [custom-domain](https://gitbook.com/docs/docs-site/custom-domain "mention") for more info.
+
+</details>
+
+<details>
+
+<summary>GitBook Subdirectory</summary>
+
+Publish your content on a subdirectory (e.g. `yourcompany.com/docs`). See [#gitbook-subdirectory](#gitbook-subdirectory "mention") for more info
+
+</details>
+
+### Redirects
+
+{% content-ref url="site-redirects" %}
+[site-redirects](https://gitbook.com/docs/docs-site/site-redirects)
+{% endcontent-ref %}
+
+### Features
+
+<details>
+
+<summary>PDF export <mark style="background-color:purple;">Premium &#x26; Ultimate</mark></summary>
+
+Let your visitors to export your GitBook as PDF. See [pdf-export](https://gitbook.com/docs/docs-site/pdf-export "mention") for more info.
+
+</details>
+
+<details>
+
+<summary>Page ratings <mark style="background-color:purple;">Premium &#x26; Ultimate</mark></summary>
+
+Choose whether or not visitors to your published content can leave a rating on each page to let you know how they feel about it. They’ll be able to choose a sad, neutral, or happy face.
+
+You can review the results of these ratings by opening [site analytics](https://gitbook.com/docs/docs-site/insights) from your docs site dashboard and selecting **Pages & feedback**.
+
+</details>
+
+### AI & MCP
+
+<details>
+
+<summary>Choose the AI experience <mark style="background-color:purple;">Ultimate</mark></summary>
+
+Let your site visitors ask GitBook anything with AI search or the GitBook assistant. See [ai-search](https://gitbook.com/docs/docs-site/ai-search "mention") for more info.
+
+</details>
+
+<details>
+
+<summary>Extend it with MCP connectors <mark style="background-color:purple;">Ultimate</mark></summary>
+
+Configure MCP servers that the AI assistant can use when answering user questions inside your docs. See [#how-do-i-use-gitbook-ai](https://gitbook.com/docs/ai-search#how-do-i-use-gitbook-ai "mention") for more info.
+
+</details>
+
+>### Connections
+
+{% content-ref url="../ai-and-search/connections" %}
+[connections](https://gitbook.com/docs/ai-and-search/connections)
+{% endcontent-ref %}
+
+>### Structure
+
+{% content-ref url="site-structure" %}
+[site-structure](https://gitbook.com/docs/docs-site/site-structure)
+{% endcontent-ref %}
+
+### Plan
+
+>{% content-ref url="../account-management/plans" %}
+[plans](https://gitbook.com/docs/account-management/plans)
+{% endcontent-ref %}
+
+
+---
+
+# Agent Instructions: Querying This Documentation
+
+If you need additional information that is not directly available in this page, you can query the documentation dynamically by asking a question.
+
+Perform an HTTP GET request on the current page URL with the `ask` query parameter:
+
+```bash
+GET https://gitbook.com/docs/docs-site/site-settings.md?ask=<question>
+```
+
+The question should be specific, self-contained, and written in natural language.
+The response will contain a direct answer to the question and relevant excerpts and sources from the documentation.
+
+Use this mechanism when the answer is not explicitly present in the current page, you need clarification or additional context, or you want to retrieve related documentation sections.
+# Enabling adaptive content
+
+To start customizing your documentation experience for your readers, you'll need to enable adaptive content and decide how your visitor data is passed to GitBook. This lets your site's content dynamically adapt based on who's viewing it.
+>
+### Enable adaptive content
+
+Before you’re able to pass user data to GitBook, you’ll need to configure your site to use adaptive content.
+
+Head to your [site’s settings](https://gitbook.com/docs/docs-site/site-settings), and enable **Adaptive content** from your site’s audience settings. Once enabled, you’ll get a generated ‘Visitor token signing key’, which you’ll need in order to continue the adaptive content setup.
+
+<figure><img src="https://1050631731-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FNkEGS7hzeqa35sMXQZ4X%2Fuploads%2F5EeWAo5Ij6CKrp69uMl5%2F26_01_06_enable_adaptive_content%402x.png?alt=media&#x26;token=4a1e8558-4b91-4f8b-8581-63d570a2c330" alt="A GitBook screenshot showing the enable adaptive content toggle"><figcaption><p>Enable adaptive content in your site’s Settings</p></figcaption></figure>
+
+### Set your visitor schema
+
+After enabling adaptive content, you’ll need to define a schema for the types of claims you expect GitBook to receive when a user visits your site.
+
+The visitor schema should reflect how these claims are structured when sent to GitBook.
+
+For example, if you expect a visitor to potentially be a beta user in your product, you would set a visitor schema similar to:
+>
+```json
+{
+  "type": "object",
+  "properties": {
+    "isBetaUser": {
+      "type": "boolean",
+      "description": "Whether the visitor is a Beta user."
+    }
+  },
+  "additionalProperties": false
+}
+```
+
+This will also help you use autocomplete when configuring your claims in the [condition editor](https://gitbook.com/docs/site-access/adapting-your-content#working-with-the-condition-editor). Visitor schemas only support the following types:
+>
+{% tabs %}
+{% tab title="Strings" %}
+Read claims being passed in as strings.
+
+GitBook accepts dynamic strings, meaning you can dynamically pass string data — such as a user’s name, developer tokens, and more.
+
+Strings can also contain an **optional enum** key, which allows you to restrict the data that is received by GitBook to one of it’s set values.
+
+```json
+{
+  "type": "object",
+  "properties": {
+    "language": {
+          "type": "string",
+          "description": "The language of the visitor",
+          // Optional enum property
+          "enum": [
+            "en",
+            "fr",
+            "it"
+          ]
+  },
+  "additionalProperties": false
+}
+```
+>
+{% hint style="warning" %}
+Dynamic strings (strings defined without an enum key) are only accepted for [inline expressions](https://gitbook.com/docs/creating-content/variables-and-expressions#use-variables-in-your-content). Conditional expressions for visibility of elements (pages, sections, blocks) only work with strings defined with enum keys.
+{% endhint %}
+{% endtab %}
+
+{% tab title="Booleans" %}
+Read claims being passed in as booleans.
+
+```json
+{
+  "type": "object",
+  "properties": {
+    "isBetaUser": {
+      "type": "boolean",
+      "description": "Whether the visitor is a Beta user."
+    },
+  },
+  "additionalProperties": false
+}
+```
+>
+{% endtab %}
+
+{% tab title="Objects" %}
+Nest claims in an object to group similar values.
+
+```json
+{
+  // Top level claims
+  "type": "object",
+  "properties": {
+    // Nested claims
+    "access": {
+      "type": "object",
+      "description": "User’s access to product feature",
+      "properties": {
+        "isAlphaUser": {
+          "type": "boolean",
+          "description": "Whether the visitor is a Alpha user."
+        },
+        "isBetaUser": {
+          "type": "boolean",
+          "description": "Whether the visitor is a Beta user."
+        },
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}
+```
+
+{% endtab %}
+{% endtabs %}
+
+### Set an unsigned claim
+
+Unsigned claims are a specific type of claim that identifies claims coming through that might not be signed by a client application. It is required to set claims in your visitor schema as `unsigned` if you are passing claims through URL parameters, unsigned cookies, and feature flags.
+
+If you intend to work with unsigned claims, you will need to declare the claims you are expecting in the schema under an “unsigned” prop alongside your signed claims.
+
+```json
+{
+  "type": "object",
+  "properties": {
+    "isBetaUser": {
+      "type": "boolean",
+      "description": "Whether the visitor is a Beta user."
+    },
+    // Add unsigned claims
+    "unsigned": {
+      "type": "object",
+      "description": "Unsigned claims of the site visitor.",
+      "properties": {
+        "language": {
+          "type": "string",
+          "description": "The language of the visitor",
+          // Optional enum property
+          "enum": [
+            "en",
+            "fr",
+            "it"
+          ]
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}
+```
+
+### Pass visitor data to GitBook
+
+GitBook provides different ways to pass visitor data to adapt your site's content. After defining your schema, you’ll need to decide how you want to pass your visitor data to GitBook.
+
+<table data-card-size="large" data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><i class="fa-cookie">:cookie:</i></td><td><strong>Cookies</strong></td><td>Pass visitor data into your docs through a public or signed cookie.</td><td><a href="enabling-adaptive-content/cookies">cookies</a></td></tr><tr><td><i class="fa-link">:link:</i></td><td><strong>URL</strong></td><td>Pass visitor data into your docs through URL query parameters.</td><td><a href="enabling-adaptive-content/url">url</a></td></tr><tr><td><i class="fa-flag">:flag:</i></td><td><strong>Feature flags</strong></td><td>Pass visitor data into your docs through a feature flag provider.</td><td><a href="enabling-adaptive-content/feature-flags">feature-flags</a></td></tr><tr><td><i class="fa-lock">:lock:</i></td><td><strong>Authenticated access</strong></td><td>Pass visitor data into your docs through an authentication provider.</td><td><a href="enabling-adaptive-content/authenticated-access">authenticated-access</a></td></tr></tbody></table>
+
+
+---
+
+# Agent Instructions: Querying This Documentation
+
+If you need additional information that is not directly available in this page, you can query the documentation dynamically by asking a question.
+
+Perform an HTTP GET request on the current page URL with the `ask` query parameter:
+>
+```curl
+GET https://gitbook.com/docs/site-access/adaptive-content/enabling-adaptive-content.md?ask=<question>
+```
+
+The question should be specific, self-contained, and written in natural language.
+The response will contain a direct answer to the question and relevant excerpts and sources from the documentation.
+
+
+
+Use this mechanism when the answer is not explicitly present in the current page, you need clarification or additional context, or you want to retrieve related documentation sections.
+# Site structure
+
+The content on your site comes from [spaces](https://gitbook.com/docs/creating-content/content-structure/space) in your organization. You can link one or multiple spaces. GitBook will publish each one and handle the navigation between spaces.
+
+## Content types
+
+Linked spaces can serve as one of two different content types, which determine how GitBook treats them in relation to each other and shows them to visitors.
+
+<table data-card-size="large" data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-type="image">Cover image (dark)</th><th data-hidden data-card-cover data-type="image">Cover image</th><th data-hidden data-card-target data-type="content-ref"></th><th data-hidden><select></select></th><th data-hidden data-card-cover-dark data-type="image">Cover image (dark)</th></tr></thead><tbody><tr><td><strong>Site sections</strong></td><td>Split your site into distinct parts — ideal for multiple products or parts of your organization.</td><td><a href="https://1050631731-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FNkEGS7hzeqa35sMXQZ4X%2Fuploads%2FVdIazRjl18hxN5SzpiqR%2FSite%20sections.svg?alt=media&#x26;token=2e1d4bae-4a54-4daa-96f8-b248203c6d6b">25_08_29_site_sections.svg</a></td><td><a href="https://1050631731-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FNkEGS7hzeqa35sMXQZ4X%2Fuploads%2FGzx9x7fzQtLb7ewwm3T2%2FSite%20sections.png?alt=media&#x26;token=fdc90c1d-6dee-48d9-93d6-a72bb8438cc2">25_12_10_site_sections_1.png</a></td><td><a href="site-structure/site-sections">site-sections</a></td><td></td><td><a href="https://1050631731-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FNkEGS7hzeqa35sMXQZ4X%2Fuploads%2FB96TQMaauF0yst75RsML%2FSite%20sections.png?alt=media&#x26;token=64f5801b-c97b-4df0-8a6e-97da7d04880d">25_12_10_site_sections.png</a></td></tr><tr><td><strong>Content variants</strong></td><td>Publish multiple versions of the same content — ideal for localization, versioning, and more.</td><td><a href="https://1050631731-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FNkEGS7hzeqa35sMXQZ4X%2Fuploads%2FuWpHiQp4LvA5wpM5Ovo8%2FContent%20variants.svg?alt=media&#x26;token=4b02400b-8994-4319-952d-db5e97661f02">25_08_29_content_variants.svg</a></td><td><a href="https://1050631731-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FNkEGS7hzeqa35sMXQZ4X%2Fuploads%2FDmZINE2qLnmlv30oMxUg%2FContent%20variants.png?alt=media&#x26;token=69243fd5-6aa3-44c9-a5f1-e444ad2bac86">25_12_10_content_variants_1.png</a></td><td><a href="site-structure/variants">variants</a></td><td></td><td><a href="https://1050631731-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FNkEGS7hzeqa35sMXQZ4X%2Fuploads%2FUbgdVlll8ekhPqtj3V3z%2FContent%20variants.png?alt=media&#x26;token=f696c0df-94de-45ba-8ee7-f72c0c8f8fdf">25_12_10_content_variants.png</a></td></tr></tbody></table>
+
+## Managing your site structure
+
+By managing the structure of your site, you can also manage your site’s top navigation bar. This navigation bar allows users to jump to different site sections and site section groups.
+
+From your docs site’s dashboard, open the **Settings** tab in the site header, then click **Structure**. Here you can see all the content of your site, divided into sections and variants.
+
+Your site starts out with a single section with your site's name and a single variant with the space you linked during your site's set-up.
+
+<figure><img src="https://1050631731-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FNkEGS7hzeqa35sMXQZ4X%2Fuploads%2FD4oCABc0YRJAFzaaVBpn%2Fstructure%402x.png?alt=media&#x26;token=4c4dd0df-8e8e-40e7-8a57-e9791d337c8f" alt="A GitBook screenshot showing a docs site&#x27;s structure"><figcaption><p>The structure of a published docs site.</p></figcaption></figure>
+
+### Linking a space to your docs site
+
+To add a [site section](https://gitbook.com/docs/docs-site/site-structure/site-sections), click the **Add section** button underneath the table and choose a space to link as a section. The new section is then added to the table and will be available to visitors as a tab at the top of your site.
+
+To add a [variant](https://gitbook.com/docs/docs-site/site-structure/variants), click the **Add variant** button in the section you’d like to add to, then choose a space to link. The new variant is then added to the list of variants within the chosen section and will be available to visitors in the variant dropdown on your site.
+
+When you add a space — as a variant or a section — a name and slug will be generated based on the space’s title.
+
+### Changing sections or variants
+
+<div data-full-width="false"><figure><img src="https://1050631731-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FNkEGS7hzeqa35sMXQZ4X%2Fuploads%2FoXvDCD0U1CNnP8pJHL1L%2Fedit_variant%402x.png?alt=media&#x26;token=fcea8367-71dd-441c-9f10-37171ab7f450" alt="A GitBook screenshot showing how to edit a variant"><figcaption><p>Update a site section or variant.</p></figcaption></figure></div>
+
+You can change the name and slug of each of sections and variants by clicking the **Edit** <picture><source srcset="https://1050631731-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FNkEGS7hzeqa35sMXQZ4X%2Fuploads%2F8pD8Y2BfBxCEZoi99Pnk%2Fedit%20-%20dark.svg?alt=media&#x26;token=89496678-7347-4845-8c98-ee8dd9bedaec" media="(prefers-color-scheme: dark)"><img src="https://1050631731-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FNkEGS7hzeqa35sMXQZ4X%2Fuploads%2FA3OfGjPkE5GnOQvN36jN%2Fedit.svg?alt=media&#x26;token=6f70239f-d889-4e64-9ec6-4801df47a48d" alt="The Edit icon in GitBook"></picture> button in the table row of the item you’d like to edit. This will open a modal. Edit the field(s) you’d like to change, then click the **Save** button to save.
+
+{% hint style="info" %}
+Changing a linked space's slug will change the space's canonical URL. GitBook will create an automatic redirect from the old URL to the new one. You can also [manually create redirects](https://gitbook.com/docs/docs-site/site-redirects).
+{% endhint %}
+
+To replace a section or variant, first delete it by clicking its **Edit** <picture><source srcset="https://1050631731-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FNkEGS7hzeqa35sMXQZ4X%2Fuploads%2F8pD8Y2BfBxCEZoi99Pnk%2Fedit%20-%20dark.svg?alt=media&#x26;token=89496678-7347-4845-8c98-ee8dd9bedaec" media="(prefers-color-scheme: dark)"><img src="https://1050631731-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FNkEGS7hzeqa35sMXQZ4X%2Fuploads%2FA3OfGjPkE5GnOQvN36jN%2Fedit.svg?alt=media&#x26;token=6f70239f-d889-4e64-9ec6-4801df47a48d" alt="The Edit icon in GitBook"></picture> button, then click the **Delete** button in the lower left of the modal. Once the item is deleted, click the **Add section** or **Add variant** button to add it again.
+
+### Reordering sections or variants
+
+Your site displays sections and variants in the order that they appear in your **Site structure** table. They can be reordered by grabbing the **Drag handle** <picture><source srcset="https://1050631731-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FNkEGS7hzeqa35sMXQZ4X%2Fuploads%2FjYRg42UtM4u1pHmJl4Ln%2Fdrag%20-%20dark.svg?alt=media&#x26;token=4c219b2b-37d2-449e-9130-19b6ba3d38d2" media="(prefers-color-scheme: dark)"><img src="https://1050631731-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FNkEGS7hzeqa35sMXQZ4X%2Fuploads%2FaS1QvPIBVYwhpFTGcPBN%2Foptions-menu.svg?alt=media&#x26;token=3ee40bbf-f4fb-41fa-aa30-306b559cbe88" alt="The Options menu icon in GitBook"></picture> and moving it up or down. The changed order will be reflected on your site immediately.
+
+You can also use the keyboard to select and move content. Select a section or variant with the space bar, then use the arrow keys to move it up or down. Hit the space bar again to confirm the new position.
+
+### Setting default content
+
+If you have multiple sections in your site, one section will be marked as **Default**. This section is shown when visitors arrive on your site, and is served from your site’s root URL. Other sections each have a slug that is appended to the root URL.
+
+If you have multiple variants within a section, one variant will be marked as the default. Like sections, the default variant is shown when visitors arrive on your site, or when they visit a section. Other variants each have a slug that’s appended to the section’s URL.
+
+To set a space as default, click on the **Actions menu** <picture><source srcset="https://1050631731-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FNkEGS7hzeqa35sMXQZ4X%2Fuploads%2FQ4IsWwmEEi5QM7PSXNsN%2Factions%20-%20dark.svg?alt=media&#x26;token=ebff54f4-9825-4ab0-99bc-633e1c449371" media="(prefers-color-scheme: dark)"><img src="https://1050631731-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FNkEGS7hzeqa35sMXQZ4X%2Fuploads%2F89MTSo5XRpPMVr1T0rxS%2Factions.svg?alt=media&#x26;token=2b5d001e-560a-4f29-8d22-de8163725ca1" alt="The Actions menu icon in GitBook"></picture> in the space’s table row and then click **Set as default**.
+
+{% hint style="info" %}
+Setting a space as default removes its slug field, as it will be served from the section root instead. GitBooks redirects the space’s slug to the appropriate path, to ensure visitors keep seeing your content.
+{% endhint %}
+
+### Remove content from a site
+
+To remove the content of a space from a site, open the **Settings** tab from your docs site dashboard, then click **Structure** to find the content you want to remove.
+
+Open the **Actions menu** <picture><source srcset="https://1050631731-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FNkEGS7hzeqa35sMXQZ4X%2Fuploads%2FQ4IsWwmEEi5QM7PSXNsN%2Factions%20-%20dark.svg?alt=media&#x26;token=ebff54f4-9825-4ab0-99bc-633e1c449371" media="(prefers-color-scheme: dark)"><img src="https://1050631731-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FNkEGS7hzeqa35sMXQZ4X%2Fuploads%2F89MTSo5XRpPMVr1T0rxS%2Factions.svg?alt=media&#x26;token=2b5d001e-560a-4f29-8d22-de8163725ca1" alt="The Actions menu icon in GitBook"></picture> for the space you want to remove and choose **Remove**.
+
+{% hint style="success" %}
+Removing a space from your site will remove it from the published site, but **will not delete the space or the content within it**.
+{% endhint %}
+
+
+---
+
+# Agent Instructions: Querying This Documentation
+
+If you need additional information that is not directly available in this page, you can query the documentation dynamically by asking a question.
+
+Perform an HTTP GET request on the current page URL with the `ask` query parameter:
+
+```
+GET https://gitbook.com/docs/docs-site/site-structure.md?ask=<question>
+```
+
+The question should be specific, self-contained, and written in natural language.
+The response will contain a direct answer to the question and relevant excerpts and sources from the documentation.
+
+Use this mechanism when the answer is not explicitly present in the current page, you need clarification or additional context, or you want to retrieve related documentation sections.
