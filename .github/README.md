@@ -1,4 +1,7 @@
-## The GitHub file list (partial) — suggestive of an agent/runtime project:
+# legendary-system
+
+
+## The GitHub file list (partial) — suggestive of an ```agent/runtime``` project:
 	•	.github/ — CI workflows
 	•	Cloud/, DB/, Lib/, Model/, Models/, Modules/, Router/, Template/, Tools/, Workspace/ — structure that fits modular code
 	•	agentgateway.dev/examples/basic — example usage directory
@@ -56,19 +59,15 @@ config.yaml             # Gateway configuration
 ## 📥 Getting Started (Local)
 
 1. **Clone the repo**
-```bash
+```shell
 git clone https://github.com/gh-io/legendary-system.git
 cd legendary-system
-```
-
-
-``
 	2.	Install dependencies
 	•	Follow instructions in Docs/ (or the generated docs site)
 	3.	Run the Gateway
 
 # Example, adjust after you set up tooling
-agentgateway --config config.yaml run
+```agentgateway --config config.yaml``` run
 
 	4.	Explore examples
 
@@ -76,7 +75,7 @@ cd agentgateway.dev/examples/basic
 
 
 ⸻
-``
+```
 📚 Docs & Examples
 
 This repo contains extensive documentation and examples:
@@ -104,8 +103,8 @@ This project is licensed under the Eclipse Public License 1.0 (EPL-1.0).
 ---
 
 ## 🧠 Create `Docs/index.md` from the Repo
-
-Next, here’s an `index.md` that goes **inside the `Docs/` folder** so your docs site loads perfectly:
+`
+Next, here’s an `index.md` that `index.rst goes **inside the `Docs/` folder** so your docs site loads perfectly:
 
 ```markdown
 # Legendary System Documentation
@@ -135,7 +134,7 @@ Start with the basics:
 
 ---
 
-## Examples
+>## Examples
 
 Check out runnable demos in:
 `agentgateway.dev/examples/basic`
