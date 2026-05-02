@@ -1,6 +1,6 @@
 # Adaptive content
 
-{% hint style="info" %}
+>{% hint style="info" %}
 This feature is available on the [Ultimate site plan](https://www.gitbook.com/pricing).
 {% endhint %} 
 
@@ -27,4 +27,4 @@ Adaptive content works in one of two ways:
 
 When a user visits your sites, we call the data they bring with them their “claims” — basically data that helps to identify a user. These claims are controllable by you — the site author — and can be used through the GitBook editor to show or hide different pages, variants, and sections in your docs.
 
-Head to our page about [enabling adaptive content](https://gitbook.com/docs/publishing-documentation/adaptive-content/enabling-adaptive-content) to start setting up adaptive content for your site.
+>Head to our page about [enabling adaptive content](https://gitbook.com/docs/publishing-documentation/adaptive-content/enabling-adaptive-content) to start setting up adaptive content for your site.
